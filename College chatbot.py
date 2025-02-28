@@ -3,9 +3,11 @@ import pandas as pd
 import google.generativeai as genai
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
+
 if "messages" not in st.session_state:
   st.session_state.messages=[]
-csv_url="svecw_details chatbot.csv"
+  
+csv_url="svecw_details.csv"
 try:
   df=pd.read_csv(csv_url)
 except Exception as e:
