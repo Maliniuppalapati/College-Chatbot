@@ -20,7 +20,7 @@ df['Answer']=df['Answer'].str.lower()
 
 vectorizer=TfidfVectorizer()
 question_vectors=vectorizer.fit_transform(df['Question'])
-API_KEY="AIzaSyDXIsk8yeqplDNzm2k514Qv2z9mgAKUdTk"
+API_KEY="Type Api key"
 genai.configure(api_key=API_KEY)
 model=genai.GenerativeModel('gemini-1.5-flash')
 def find_closest_question(user_query,vectorizer,question_vectors,df):
